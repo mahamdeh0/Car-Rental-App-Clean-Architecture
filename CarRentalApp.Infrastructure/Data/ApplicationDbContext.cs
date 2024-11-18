@@ -1,5 +1,6 @@
 ﻿using CarRentalApp.Core.Entities;
 using CarRentalApp.Infrastructure.Configurations;
+using CarRentalApp.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalApp.Infrastructure.Data
@@ -15,7 +16,7 @@ namespace CarRentalApp.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReservationConfiguration).Assembly);
-
+            modelBuilder.Seed();
         }
 
     }
