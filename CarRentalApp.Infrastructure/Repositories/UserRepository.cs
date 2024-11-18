@@ -43,16 +43,12 @@ namespace CarRentalApp.Infrastructure.Repositories
             }
         }
 
-        public async Task<User> GetUserByEmailAsync(string email)  
+        public async Task<User> GetUserByEmailAsync(string email)
         {
             try
             {
                 var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-                if (user == null)
-                {
-                    throw new KeyNotFoundException($"User with email {email} not found.");
-                }
-                return user;
+                return user;  
             }
             catch (Exception ex)
             {
