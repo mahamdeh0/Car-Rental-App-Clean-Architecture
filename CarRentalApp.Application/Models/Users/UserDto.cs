@@ -12,6 +12,7 @@
           string AddressLine2,
           string City,
           string Country,
-          string DriversLicenseNumber
+          string DriversLicenseNumber,
+          string PasswordHash
       );
 }

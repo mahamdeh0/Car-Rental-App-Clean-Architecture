@@ -1,17 +1,19 @@
 ﻿namespace CarRentalApp.Application.Models.Users
 {
-    public record UserCreateDto
-       (
-           string FirstName,
-           string LastName,
-           string Email,
-           string PhoneNumber,
-           DateTime? DateOfBirth,
-           string AddressLine1,
-           string AddressLine2,
-           string City,
-           string Country,
-           string DriversLicenseNumber,
-           string PasswordHash
-       );
+    public class UserCreateDto
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string AddressLine1 { get; set; }
+        public string AddressLine2 { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string DriversLicenseNumber { get; set; }
+        public string PasswordHash { get; set; }
+
+      
+    }
 }
